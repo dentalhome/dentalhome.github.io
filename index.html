@@ -7,11 +7,126 @@
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
 
 
     <style>
+
+
+::-moz-selection {
+ background: white;
+}
+
+::selection { background: white; }
+
+@-webkit-keyframes 
+icon-beat {  0% {
+ -webkit-transform: scale(2);
+ -ms-transform: scale(2);
+ transform: scale(2);
+}
+ 100% {
+ -webkit-transform: scale(1);
+ -ms-transform: scale(1);
+ transform: scale(1);
+}
+}
+
+@keyframes 
+icon-beat {  0% {
+ -webkit-transform: scale(2);
+ -ms-transform: scale(2);
+ transform: scale(2);
+}
+ 100% {
+ -webkit-transform: scale(1);
+ -ms-transform: scale(1);
+ transform: scale(1);
+}
+}
+
+* {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+label {
+  display: block;
+  position: relative;
+  padding: 0.5rem 1rem;
+  line-height: 28px;
+  font-weight: normal;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+label:last-of-type { margin-right: 1rem; }
+
+label i {
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  top: 6px;
+  font-style: normal;
+  color: #ccc;
+}
+
+label span {
+  display: inline-block;
+  margin-left: 5px;
+  line-height: 25px;
+  color: gray;
+}
+
+input[type="radio"],
+input[type="checkbox"] { display: none; }
+
+input[type="radio"] + i:before,
+input[type="checkbox"] + i:before {
+  font-family: 'FontAwesome';
+  font-size: 28px;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+}
+
+input[type="radio"]:checked + i,
+input[type="checkbox"]:checked + i {
+  position: relative;
+  -webkit-animation: icon-beat 0.1s ease;
+  animation: icon-beat 0.1s ease;
+}
+
+input[type="radio"]:checked + i + span,
+input[type="checkbox"]:checked + i + span {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+input[type="radio"] + i:before { content: "\f10c"; }
+
+input[type="radio"]:checked + i:before { content: "\f111"; }
+
+input[type="radio"]:checked + i + span,
+input[type="radio"]:checked + i:before { color: rgba(0, 128, 128, 0.5); }
+
+input[type="checkbox"] + i:before { content: "\f096"; }
+
+input[type="checkbox"]:checked + i:before { content: "\f046"; }
+
+input[type="checkbox"]:checked + i + span,
+input[type="checkbox"]:checked + i:before { color: rgba(0, 128, 0, 0.5); }
+
+
 
     p.parrafo{
     font-family: 'Roboto', sans-serif;
@@ -160,6 +275,19 @@ margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
     margin-left: 5px; }
+
+    .callout11 {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border: 2px solid red;
+  border-radius: 0;
+  position: relative;
+  color: #4CAF50;
+  background-color: white; 
+margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px; }
   
   .callout2 {
   margin: 0 0 1rem 0;
@@ -231,7 +359,7 @@ margin-top: 5px;
     <div class="row">
       <div class="columns">
         <div class="callout5">
-        <center><h3 class="titulo">IDENTIFICA TU CABELLO</h3></center>
+        <center><h3 class="titulo">TEST DE EVALUACION DE RIESGO DE CARIES DENTAL</h3></center>
         </div>
       </div>
     </div>
@@ -241,7 +369,7 @@ margin-top: 5px;
 <div class="row">
   <div class="columns">
     <div class="callout6">
-    <h3><p class="parrafo" align="justify"> La naturaleza nos dio unas hebras capilares en particular, pero ella a su vez también nos dio recursos para manejarlas y hacerlas ver hermosas. Somos como árboles de estructura capilar similar.<br>Realiza el siguiente test e identifica tu tipo de hebras capilares: </p></h3>
+    <h3><p class="parrafo" align="justify"> La caries es uno de los padecimientos más comunes en el mundo, es causada por bacterias que viven en la placa que se acumula en tus dientes. Para conocer tu riesgo de sufrir caries contesta el siguiente Test: </p></h3>
 </div>
   </div>
 </div>
@@ -250,19 +378,29 @@ margin-top: 5px;
    </div>
     <div id="cuadro1" style='display:none;'>
         <div class="callout1">      
-          <p class="tq"> ¿Para que tus hebras estén limpias cada cuánto las lavas? : </p>
+          <p class="tq"> ¿Observas manchas blancas, oscuras o agujeros en tus dientes? </p>
           
               <form name="pregunta1" action="#" onsubmit="return comprobar()">
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Lavo mis hebras todos los días, así mantengo mi cuero cabelludo libre de grasa.</label>
-              <div></div>
+
+              <label for="pokemonRed"><input type="radio" name="pokemon" id="pokemonRed" value="Red"/>
+              <i></i> <span>Si</span>
+              </label>
+
+              
               <br>  
-              <input type="radio" name="pokemon" value="Red" id="pokemonBlue"><label for="pokemonBlue">Lavo mis hebras un día sí y un día no, para que no se vea con un aspecto de suciedad</label>
-              <div></div>
-              <br>  
-              <input type="radio" name="pokemon" value="Red" id="pokemongreen"><label for="pokemongreen">Lavo mis hebras incluso una vez por semana, mis hebras casi nunca se ven sucias</label>
-              <div></div>
-              <br>  
-              <input type="radio" name="pokemon" value="Red" id="pokemonyellow"><label for="pokemonyellow">Lavo mis hebras 2 veces a la semana, así no se ven tan resecas y esponjadas.</label>    
+              <label for="pokemonBlue"><input type="radio" name="pokemon" id="pokemonBlue" value="Red"/>
+              <i></i> <span>No</span>
+              </label>
+
+
+          </div>
+
+          <div class="callout11" id="respuesta1" style="display: none;">      
+          <p> Respondiste SI, te recomendamos visitar Dentalhome y solicitar un examen odontológico lo antes posible.  Pbx: 44 44 801</p></div>
+
+          <div class="callout11" id="respuesta2" style="display: none;">      
+          <p>  Respondiste No, Aunque no veas manchas o agujeros, te recomendamos una evaluación dental, pues hay lugares que no son visibles y podrías estar formando caries.</p>
+        
           </div>
 
           <center><input type="button" value="Siguiente" onclick="mostrar2()"></center>
@@ -584,22 +722,23 @@ Champú Petunia De Paz FrutoSALVAJE te ayudará a humectar desde el folículo pi
             
 
             var w1 = 0;
-            var w2 = 0;
-            var w3 = 0;
-            var w4 = 0;
 
             if(r1 == 0){
-              w1 = w1 + 1;
+              w1 = w1 + 6;
             }
             if(r1 == 1){
-              w2 = w2 + 1;
+              w1 = w1 + 0;
             }
-            if(r1 == 2){
-              w3 = w3 + 1;
+
+            if(r2 == 0){
+              w1 = w1 + 6;
             }
-            if(r1 == 3){
-              w4 = w4 + 1;
+            if(r2 == 1){
+              w1 = w1 + 0;
             }
+
+
+            
 
             if(r2 == 0){
               w1 = w1 + 1;
@@ -749,6 +888,25 @@ Champú Petunia De Paz FrutoSALVAJE te ayudará a humectar desde el folículo pi
               document.getElementById('cuadro7').style.display = 'block';
             document.getElementById('cuadro6').style.display = 'none';}
 
+
+$(document).ready(function() {
+   $('input[type="radio"]').click(function() {
+       if($(this).attr('id') == 'pokemonRed') {
+            $('#respuesta1').show();           
+       }
+
+       else {
+            $('#respuesta1').hide();   
+       }
+       if($(this).attr('id') == 'pokemonBlue') {
+            $('#respuesta2').show();           
+       }
+
+       else {
+            $('#respuesta2').hide();   
+       }
+   });
+});
             
   </script>
 

@@ -1,0 +1,756 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+
+
+    <style>
+
+    p.parrafo{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    margin-left: 25px; }
+    }
+
+    p.tq{
+      font-family: 'Roboto', sans-serif;
+     font-size: 1.2em;
+     font-weight: 400; 
+    }
+
+    ul.lista{
+    font-family: 'Roboto', sans-serif;  
+    }
+
+    h2.titulo{
+    font-family: 'Roboto', sans-serif;  
+    }
+
+    label{
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #0a0a0a;
+  background: #fefefe;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+
+  h3.titulo{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h3{
+    color: #607D8B;
+  }
+
+  .contenedor{
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    /*border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;*/
+    border-color: #F06292;
+  }
+ 
+/*input[type="submit"].empezar{
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 10px 10px 10px 10px;
+  padding: 0.85em 1em;
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+  background-color: #2199e8;
+  color: #fefefe; }
+  [data-whatinput='mouse'] .button {
+    outline: 0; }*/
+
+
+  input[type="submit"]{
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 5px 5px 5px 5px;
+  padding: 0.85em 2em;
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+  background-color: #6dc846;
+  color: #fefefe; }
+  [data-whatinput='mouse'] .button {
+    outline: 0; }
+
+    input[type="button"]{
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 5px 5px 5px 5px;
+  padding: 0.85em 1.6em;
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+  background-color: #6dc846;
+  color: #fefefe; }
+  [data-whatinput='mouse'] .button {
+    outline: 0; }
+
+
+
+button.comprar{
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 5px 5px 5px 5px;
+  padding: 0.85em 4em;
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+  background-color: #6dc846;
+  color: #fefefe; }
+  [data-whatinput='mouse'] .button {
+    outline: 0; }
+    
+    .callout1 {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border: 2px solid #a0db87;
+  border-radius: 0;
+  position: relative;
+  color: #4CAF50;
+  background-color: white; 
+margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px; }
+  
+  .callout2 {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border: 2px solid #a0db87;
+  border-radius: 0;
+  position: relative;
+  color: #4CAF50;
+  background-color: white; 
+margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px; }
+
+  .callout3 {
+  margin: 0 0 1rem 0;
+  padding: 1.6rem;
+  border: 2px solid #F06292;
+  border-radius: 0;
+  position: relative;
+  color: white;
+  background-color: #F06292;
+  /*border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;*/
+border: 0px solid #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px; }
+ 
+
+ .callout5 {
+  margin: 0 0 0.5rem 0;
+  padding: 1rem;
+  border: 2px solid #a0db87;
+  border-radius: 0;
+  position: relative;
+  color: white;
+  background-color: #a0db87; 
+margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px; }
+
+    .callout6 {
+  margin: 0 0 0.5rem 0;
+  padding: 1rem;
+  border: 2px solid #a0db87;
+  border-radius: 0;
+  position: relative;
+  color: white;
+  background-color: white; 
+margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px; }   
+    </style>
+
+
+
+
+
+  </head>
+  <body>
+
+<div id="contenido">
+  <div id="tprincip">
+    <div class="row">
+      <div class="columns">
+        <div class="callout5">
+        <center><h3 class="titulo">IDENTIFICA TU CABELLO</h3></center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="texto1">
+<div class="row">
+  <div class="columns">
+    <div class="callout6">
+    <h3><p class="parrafo" align="justify"> La naturaleza nos dio unas hebras capilares en particular, pero ella a su vez también nos dio recursos para manejarlas y hacerlas ver hermosas. Somos como árboles de estructura capilar similar.<br>Realiza el siguiente test e identifica tu tipo de hebras capilares: </p></h3>
+</div>
+  </div>
+</div>
+
+<center><input type="button" value="Realizar Test" onclick="mostrar1()"></center>
+   </div>
+    <div id="cuadro1" style='display:none;'>
+        <div class="callout1">      
+          <p class="tq"> ¿Para que tus hebras estén limpias cada cuánto las lavas? : </p>
+          
+              <form name="pregunta1" action="#" onsubmit="return comprobar()">
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Lavo mis hebras todos los días, así mantengo mi cuero cabelludo libre de grasa.</label>
+              <div></div>
+              <br>  
+              <input type="radio" name="pokemon" value="Red" id="pokemonBlue"><label for="pokemonBlue">Lavo mis hebras un día sí y un día no, para que no se vea con un aspecto de suciedad</label>
+              <div></div>
+              <br>  
+              <input type="radio" name="pokemon" value="Red" id="pokemongreen"><label for="pokemongreen">Lavo mis hebras incluso una vez por semana, mis hebras casi nunca se ven sucias</label>
+              <div></div>
+              <br>  
+              <input type="radio" name="pokemon" value="Red" id="pokemonyellow"><label for="pokemonyellow">Lavo mis hebras 2 veces a la semana, así no se ven tan resecas y esponjadas.</label>    
+          </div>
+
+          <center><input type="button" value="Siguiente" onclick="mostrar2()"></center>
+        </div>
+
+
+        <div id="cuadro2" style='display:none;'>
+        <div class="callout2">      
+          <p class="tq">¿Cómo lucen tus hebras después de lavarlas?</p>
+              <input type="radio" name="pokemon1" value="Red" id="pokemonRed1"><label for="pokemonRed1">Brillan y tiene volumen, pero pasan las horas y se ponen grasosas.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon1" value="Red" id="pokemonBlue1"><label for="pokemonBlue1">Arriba son brillantes pero en las puntas quedan resecas.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon1" value="Red" id="pokemongreen1"><label for="pokemongreen1">Fáciles de manejar y permanecen limpias por días.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon1" value="Red" id="pokemonyellow1"><label for="pokemonyellow1">Inmanejables, muy rebeldes, se erizan y tiene estática (frizz).</label>
+          
+      </div>
+      <center><input type="button" value="Siguiente" onclick="mostrar3()"></center>
+      </div>      
+
+    <div id="cuadro3" style='display:none;'>
+        <div class="callout1">      
+          <p class="tq">Cuando peinas tus hebras, ¿genera mucho frizz?</p>
+      
+              <input type="radio" name="pokemon2" value="Red" id="pokemonRed2"><label for="pokemonRed2">Solo de vez en cuando y sobre todo cuando el día está muy frío</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon2" value="Red" id="pokemonBlue2"><label for="pokemonBlue2">No, siempre puedo peinarme fácilmente sin tener que hacerlo en muchas ocasiones</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon2" value="Red" id="pokemongreen2"><label for="pokemongreen2">Solo en algunas ocasiones, especialmente cuando no hidrato mis hebras</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon2" value="Red" id="pokemonyellow2"><label for="pokemonyellow2">En ocasiones es muy rebelde, pero no siempre.</label>
+            
+            </div>
+            <center><input type="button" value="Siguiente" onclick="mostrar4()"></center>
+
+      </div>
+
+  
+  <div id="cuadro4" style='display:none;'>
+        <div class="callout2">      
+          <p class="tq">Cuando llueve o hay mucha humedad, tus hebras:</p>
+        
+              
+              <input type="radio" name="pokemon3" value="Red" id="pokemonRed3"><label for="pokemonRed3">Se pone un poco escurridas y sin volumen</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon3" value="Red" id="pokemonBlue3"><label for="pokemonBlue3">Pierden solo un poco de cuerpo.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon3" value="Red" id="pokemongreen3"><label for="pokemongreen3">Se salen de control y tiende a rizarse o a ondularse.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon3" value="Red" id="pokemonyellow3"><label for="pokemonyellow3">Se ponen lacias en las raíces y rizadas en las puntas.</label>      
+       
+      </div>
+      <center><input type="button" value="Siguiente" onclick="mostrar5()"></center>
+    </div>
+
+      <div id="cuadro5" style='display:none;'>
+        <div class="callout1">      
+          <p class="tq">¿Cómo lucen tus hebras después de estar expuestas al sol?</p>
+              
+              <input type="radio" name="pokemon4" value="Red" id="pokemonRed4"><label for="pokemonRed4">Igual que siempre, el sol no las afecta.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon4" value="Red" id="pokemonBlue4"><label for="pokemonBlue4">Bien, pero a veces tu cuero cabelludo se siente algo reseco.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon4" value="Red" id="pokemongreen4"><label for="pokemongreen4">Se reseca fuertemente con el sol.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon4" value="Red" id="pokemonyellow4"><label for="pokemonyellow4">Las puntas se ponen quebradizas y más claras que las raíces.</label>
+            
+        
+      </div>
+      <center><input type="button" value="Siguiente" onclick="mostrar6()"></center>
+    </div>
+
+     <div id="cuadro6" style='display:none;'>
+        <div class="callout2">      
+          <p class="tq">¿Qué efecto deja en tus hebras el uso del acondicionador?</p>
+              
+              <input type="radio" name="pokemon5" value="Red" id="pokemonRed5"><label for="pokemonRed5">Lo deja totalmente lacio y sin volumen.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon5" value="Red" id="pokemonBlue5"><label for="pokemonBlue5">Ayuda a que sea menos rebelde y solo se necesita poner poca cantidad</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon5" value="Red" id="pokemongreen5"><label for="pokemongreen5">Lo deja suave y manejable.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon5" value="Red" id="pokemonyellow5"><label for="pokemonyellow5">Hace que las puntas se vean sedosas pero el cuero cabelludo graso.</label>
+              
+         
+      </div>
+       <center><input type="button" value="Siguiente" onclick="mostrar7()"></center>
+    </div>
+
+    <div id="cuadro7" style='display:none;'>
+        <div class="callout1">      
+          <p class="tq">Si te haces crespos responde a la siguiente pregunta, ¿cuánto te duran?</p>
+              
+              <input type="radio" name="pokemon6" value="Red" id="pokemonRed6"><label for="pokemonRed6">No mucho, se deshacen a las pocas horas.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon6" value="Red" id="pokemonBlue6"><label for="pokemonBlue6">Generalmente te dura todo el día.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon6" value="Red" id="pokemongreen6"><label for="pokemongreen6">Te quedan perfectos por más de un día.</label>
+              <div></div>
+              <br> 
+              <input type="radio" name="pokemon6" value="Red" id="pokemonyellow6"><label for="pokemonyellow6">Las puntas se rizan muy bien pero la raíz queda sin volumen.</label>
+       
+      </div>
+        
+      <p><center><input type="submit" value="Enviar Test"><br></center>
+
+      </div>  
+      </form>   
+
+</div>
+      <div id="oculto_a" style='display:none;'>
+    <div class="callout3">  
+    <center><h2 class="titulo">Hebras capilares grasas</h2></center>
+    <center><p class="parrafo" align="justify">¿Cuánto dura limpia? Muy poco, o por lo menos esa es la sensación que da cuando lo vemos.
+Son brillantes por el exceso de sebo que producen, aspecto sucio y apelmazado, sin volumen y poco crecimiento por la obstrucción en el folículo piloso.  
+
+Nuestro tratamiento capilar  Fruto SALVAJE te dará brillo, suavidad y manejo, ayudará al crecimiento y evitará la caída gracias a su poder astringente y antiséptico limpiará a profundidad el folículo piloso ayudando a equilibrar el sebo de la raíz capilar, que trabajando con nuestro champú especial para hebras grasas Adelfa del Alba estabilizará el sebo que producen nuestras hebras, sin dejar de lado la importancia de una hidratación  profunda con nuestra crema hidratante Otoño Naranja que trabajará en las áreas más dañadas devolviendo la suavidad y brillo de tu cabello. </p></center>
+    </div>
+    <div class="contenedor">
+    <center><img src="http://www.julianvergara.me/wp-content/uploads/2016/02/opcionayc.png" width="80%" height="60%"></center></div>
+
+    <a href="http://frutosalvajeoficial.com/sitio/movil/ecommerce.subcategorias.php?idrelacion=1"><center><button class="comprar">Comprar</button></center></a>
+    
+    <div class="callout3"> 
+      <center><h2 class="titulo">Recomendaciones </h2></center>
+    <center><ul class="lista" align="justify">
+  <li>Cuando lo laves, evita hacer masajes en el cuerpo cabelludo, previniendo la estimulación de las glándulas sebáceas.</li>
+  <li>Evita el agua caliente o tibia y lava con agua fría que tonifique y de brillo al cabello.</li>
+  <li>Utiliza el secador a suaves temperaturas y el tiempo menos posible. 
+No utilices peines de dientes finos y juntos.</li>
+  <li>Aplica regularmente (máximo dos veces por semana) mascarilla artesanal a base de frutas FrutoSALVAJE, por su poder astringente te ayudara a controlar el exceso de sebo.</li>
+  <li>Agrega 3 gotas de aceite Óleo Sublime a tu champú Adelfa Del Alma o camelia silvestre (si estas alternando). Es excelente por su propiedad antiséptica y tónica gracias al aceite de jojoba.</li>
+  <li>Si lo vas a tinturar, agrega 3 gotas de Óleo Sublime a la mezcla para evitar maltratarlo.</li>
+  <li>Poda las puntas mínimo cada tres meses con nuestras fases lunares publicadas todos los principios de cada mes.</li>
+</ul></center>
+</div>
+
+<FORM METHOD="LINK" ACTION="articulo.html"> <center><INPUT TYPE="submit" VALUE="Otros Tipos de Cabello"></center></FORM>
+</div>
+
+<div id="oculto_b" style='display:none;'>
+        <div class="callout3">  
+    <center><h2 class="titulo">Hebras capilares mixtas</h2></center>
+    <center><p class="parrafo" align="justify">Ni secas ni grasas. Es el más difícil de cuidar; la grasa se concentra en la raíz de la hebra capilar dando apariencia de suciedad cuando posiblemente lo hemos acabado de lavar, las puntas son secas con sensación de escoba, maltratadas y ahiladas, generalmente con horquilla o porosas por la sequedad. 
+Nuestro tratamiento capilar  Fruto SALVAJE te dará brillo, suavidad y manejo, ayudará al crecimiento y evitará la caída, gracias a su poder astringente y antiséptico limpiará a profundidad el folículo piloso ayudando a equilibrar el sebo de la raíz capilar e hidratará las puntas resecas y maltratadas, que trabajando con nuestro champú especial para hebras mixtas Camelia Silvestre alternado con Petunia De Paz lo dejara limpio, devolviendo su brillo y suavidad natural; proporcionando fuerza, resistencia y elasticidad.
+Compleméntalo  con nuestra crema hidratante Otoño Naranja FrutoSALVAJE que te ofrecerá humectación en cada lavado. </p></center>
+    </div>
+    <div class="contenedor">
+    <center><img src="http://www.julianvergara.me/wp-content/uploads/2016/02/opcionb.png" width="80%" height="60%"></center></div>
+
+    <a href="http://frutosalvajeoficial.com/sitio/movil/ecommerce.subcategorias.php?idrelacion=1"><center><button class="comprar">Comprar</button></center></a> 
+    
+    <div class="callout3"> 
+      <center><h2 class="titulo">Recomendaciones </h2></center>
+    <center><ul class="lista" align="justify">
+  <li>Usar un champú que tenga en cuenta esta condición aliviando la grasa de las raíces y dando un cuidado extra de humectación de medios a puntas. Champú Camelia Silvestre FrutoSALVAJE no solo limpiará a profundidad, también por sus proteínas darán a las puntas un cuidado intenso, dejándolo suave, elástico y manejable.</li>
+  <li>Si usas acondicionador Otoño Naranja FrutoSALVAJE procura aplicarlo siempre de medios a puntas, así la máscara protectora mantendrá la parte seca con humectación. </li>
+  <li>Al secar tus hebras, trata las puntas con delicadeza eliminando el exceso de agua con un apretón suave de toalla. No seques la raíz con brusquedad para evitar la irritación del cuero cabelludo. </li>
+  <li>No abuses del secador y si es necesario protege las puntas con Óleo Sublime evitando que aumente la sequedad y posible aparición de puntas abiertas.</li>
+  <li>Evita espumas y geles moldeadores que pueden aumentar la producción de grasa en la raíz, de no poder hacerlo, después de usarlos, lava muy bien sin dejar residuos.</li>
+  <li>Si lo vas a tinturar, agrega 3 gotas de Óleo Sublime a la mezcla para evitar maltratarlo.</li>
+  <li>Poda las puntas mínimo cada tres meses con nuestras fases lunares publicadas todos los principios de cada mes.</li>
+</ul></center>
+</div>
+<FORM METHOD="LINK" ACTION="articulo.html"> <center><INPUT TYPE="submit" VALUE="Otros Tipos de Cabello"></center></FORM>
+</div>
+
+
+<div id="oculto_c" style='display:none;'>
+        <div class="callout3">  
+    <center><h2 class="titulo">Hebras capilares normales</h2></center>
+    <center><p class="parrafo" align="justify">Son de buena calidad. Manejables, sedosas, lucen sanas, brillantes y con movimiento natural, no tiende a estar seco o grasoso ya que la producción de sebo es el indicado. 
+Nuestro tratamiento capilar  Fruto SALVAJE te dará brillo, suavidad y manejo, ayudará al crecimiento y evitará la caída; gracias a su poder astringente y antiséptico limpiará a profundidad el folículo piloso que trabajando con nuestro champú especial para hebras normales Amber de Primavera, alternado con Petunia De Paz consigue que la hebra se mantenga más fuerte y elástica, evitando que las puntas se abran, algo habitual en el pelo largo. Compleméntalo  con nuestra crema hidratante Otoño Naranja que brindará hidratación profunda en las áreas más dañadas, devolviendo la suavidad y el brillo de las hebras  bien tratadas.</p></center>
+    </div>
+    <div class="contenedor">
+    <center><img src="http://www.julianvergara.me/wp-content/uploads/2016/02/opcionayc.png" width="80%" height="60%"></center></div>
+
+    <a href="http://frutosalvajeoficial.com/sitio/movil/ecommerce.subcategorias.php?idrelacion=1"><center><button class="comprar">Comprar</button></center></a>
+    
+    <div class="callout3"> 
+      <center><h2 class="titulo">Recomendaciones </h2></center>
+    <center><ul class="lista" align="justify">
+  <li>Usa champú Amber De Primavera FrutoSALVAJE y acondicionador Otoño Naranja especialmente en las puntas.</li>
+  <li>Cuando lo laves, regálale un masaje al cuero cabelludo.</li>
+  <li>Enjuaga siempre con agua fría o tibia, no caliente.</li>
+  <li>No es necesario lavarlo todos los días, hazlo cuando notes que está sucio.</li>
+  <li>Usa el secador y la plancha pero no abuses.</li>
+  <li>No lo satures de productos que puedan transformarlo en unas hebras grasas.</li>
+  <li>Si lo vas a tinturar, agrega 3 gotas de Óleo Sublime a la mezcla para evitar maltratarlo.</li>
+  <li>Poda las puntas mínimo cada tres meses con nuestras fases lunares publicadas todos los principios de cada mes.</li>
+</ul></center>
+</div>
+<FORM METHOD="LINK" ACTION="articulo.html"> <center><INPUT TYPE="submit" VALUE="Otros Tipos de Cabello"></center></FORM>
+</div>
+
+<div id="oculto_d" style='display:none;'>
+        <div class="callout3">  
+    <center><h2 class="titulo">Hebras capilares secas</h2></center>
+    <center><p class="parrafo" align="justify">Cuero cabelludo deshidratado por falta de producción de sebo en glándulas sebáceas. Se parte con facilidad, es difícil de desenredar, se esponja con facilidad, presenta ausencia de brillo, es áspero al tacto, sufre de puntas secas y partidas.
+Champú Petunia De Paz FrutoSALVAJE te ayudará a humectar desde el folículo piloso, hasta la fibra capilar favoreciendo el buen desarrollo de la cutícula que lo protege. Es sugerido evitar la exposición al sol, al secador, el cepillado, tintes u otros químicos que tiendan a resecarlo aún más para evitar maltratarlo en exceso; si por lo contrario debe usarlos, darle un espacio y ser prudente para que la hebra capilar se recupere. También puedes aplicar otros productos como FrutoSALVAJE tratamiento capilar a base de frutas para recuperar lo que la sequedad ha dejado perder, retirar con champú Petunia De Paz y alternar con Amber De Primavera para dejar limpio el folículo y promover la irrigación sanguínea, abriendo escamas y que los nutrientes que proporciona penetren y sean mejor absorbidos; Otoño Naranja acondicionador que lo hidratara dándole apariencia suave; y como sellador de puntas Óleo Sublime, aceite regenerador compuesto por los mejores de la naturaleza como Copaiba, Jojoba, Argán y Mamey.</p></center>
+    </div>
+    <div class="contenedor">
+    <center><img src="http://www.julianvergara.me/wp-content/uploads/2016/02/opciond.png" width="80%" height="60%"></center></div>
+
+    <a href="http://frutosalvajeoficial.com/sitio/movil/ecommerce.subcategorias.php?idrelacion=1"><center><button class="comprar">Comprar</button></center></a>
+    
+    <div class="callout3"> 
+      <center><h2 class="titulo">Recomendaciones </h2></center>
+    <center><ul class="lista" align="justify">
+  <li>No lavarlo todos los días ya que al hacerlo se elimina la película lipídica que lo protege. Si vas al gimnasio, evitar el contacto con el sudor, dejar secar después de entrenar naturalmente.</li>
+  <li>Utilizar productos especiales que humecten la fibra capilar</li>
+  <li>Utilizar mascarilla FrutoSALVAJE una vez por semana</li>
+  <li>Masajear regularmente el cuero cabelludo para activar la producción de grasa en glándulas sebáceas.</li>
+  <li>Evita en lo posible lavarlo con agua caliente o muy tibia, preferiblemente ambiente o fría. </li>
+  <li>El cabello seco cuando esta húmedo es muy frágil, desenreda antes de lavarlo y después para desenredar empieza de abajo hacia arriba aplicando siempre Acondicionador Otoño Naranja en el transcurso de la lavada.</li>
+  <li>Si lo vas a tinturar, agrega 3 gotas de Óleo Sublime a la mezcla para evitar maltratarlo.</li>
+  <li>Poda las puntas mínimo cada tres meses con nuestras fases lunares publicadas todos los principios de cada mes.</li>
+</ul></center>
+</div>
+
+<FORM METHOD="LINK" ACTION="articulo.html"> <center><INPUT TYPE="submit" VALUE="Otros Tipos de Cabello"></center></FORM>
+</div>
+
+
+
+    <script type="text/javascript">
+
+    function comprobar() {
+
+      //***************ALGORITMO PARA SABER CUAL ES LA MAYOR SELECCIÓN******************
+    
+      var elegido = -1;
+
+         var opciones1 = document.pregunta1.pokemon; //array de elementos
+         for (i=0;i<opciones1.length;i++) { //bucle de comprobación
+               if (opciones1[i].checked == true) {
+               elegido = i;
+               //bucle de comprobación
+               }//número del elemento elegido en el array
+               }
+             var r1 = elegido; 
+
+    var elegido = -1;
+
+         var opciones2 = document.pregunta1.pokemon1; //array de elementos
+         for (i=0;i<opciones2.length;i++) { //bucle de comprobación
+               if (opciones2[i].checked == true) {
+               elegido = i;
+               //bucle de comprobación
+               }//número del elemento elegido en el array
+               }
+             var r2 = elegido;
+
+             var elegido = -1;
+
+         var opciones3 = document.pregunta1.pokemon2; //array de elementos
+         for (i=0;i<opciones3.length;i++) { //bucle de comprobación
+               if (opciones3[i].checked == true) {
+               elegido = i;
+               //bucle de comprobación
+               }//número del elemento elegido en el array
+               }
+             var r3 = elegido;
+
+             var opciones4 = document.pregunta1.pokemon3; //array de elementos
+         for (i=0;i<opciones4.length;i++) { //bucle de comprobación
+               if (opciones4[i].checked == true) {
+               elegido = i;
+               //bucle de comprobación
+               }//número del elemento elegido en el array
+               }
+             var r4 = elegido;
+
+             var opciones5 = document.pregunta1.pokemon4; //array de elementos
+         for (i=0;i<opciones5.length;i++) { //bucle de comprobación
+               if (opciones5[i].checked == true) {
+               elegido = i;
+               //bucle de comprobación
+               }//número del elemento elegido en el array
+               }
+             var r5 = elegido;      
+
+
+            var opciones6 = document.pregunta1.pokemon5; //array de elementos
+         for (i=0;i<opciones6.length;i++) { //bucle de comprobación
+               if (opciones6[i].checked == true) {
+               elegido = i;
+               //bucle de comprobación
+               }//número del elemento elegido en el array
+               }
+             var r6 = elegido;
+
+             var opciones6 = document.pregunta1.pokemon6; //array de elementos
+         for (i=0;i<opciones6.length;i++) { //bucle de comprobación
+               if (opciones6[i].checked == true) {
+               elegido = i;
+               //bucle de comprobación
+               }//número del elemento elegido en el array
+               }
+             var r7 = elegido;    
+            
+
+            var w1 = 0;
+            var w2 = 0;
+            var w3 = 0;
+            var w4 = 0;
+
+            if(r1 == 0){
+              w1 = w1 + 1;
+            }
+            if(r1 == 1){
+              w2 = w2 + 1;
+            }
+            if(r1 == 2){
+              w3 = w3 + 1;
+            }
+            if(r1 == 3){
+              w4 = w4 + 1;
+            }
+
+            if(r2 == 0){
+              w1 = w1 + 1;
+            }
+            if(r2 == 1){
+              w2 = w2 + 1;
+            }
+            if(r2 == 2){
+              w3 = w3 + 1;
+            }
+            if(r2 == 3){
+              w4 = w4 + 1;
+            }
+
+            if(r3 == 0){
+              w1 = w1 + 1;
+            }
+            if(r3 == 1){
+              w2 = w2 + 1;
+            }
+            if(r3 == 2){
+              w3 = w3 + 1;
+            }
+            if(r3 == 3){
+              w4 = w4 + 1;
+            }
+
+            if(r4 == 0){
+              w1 = w1 + 1;
+            }
+            if(r4 == 1){
+              w2 = w2 + 1;
+            }
+            if(r4 == 2){
+              w3 = w3 + 1;
+            }
+            if(r4 == 3){
+              w4 = w4 + 1;
+            }
+
+            if(r5 == 0){
+              w1 = w1 + 1;
+            }
+            if(r5 == 1){
+              w2 = w2 + 1;
+            }
+            if(r5 == 2){
+              w3 = w3 + 1;
+            }
+            if(r5 == 3){
+              w4 = w4 + 1;
+            }
+
+            if(r6 == 0){
+              w1 = w1 + 1;
+            }
+            if(r6 == 1){
+              w2 = w2 + 1;
+            }
+            if(r6 == 2){
+              w3 = w3 + 1;
+            }
+            if(r6 == 3){
+              w4 = w4 + 1;
+            }
+
+            if(r7 == 0){
+              w1 = w1 + 1;
+            }
+            if(r7 == 1){
+              w2 = w2 + 1;
+            }
+            if(r7 == 2){
+              w3 = w3 + 1;
+            }
+            if(r7 == 3){
+              w4 = w4 + 1;
+            }
+
+            
+               
+
+            if(w1>w2 && w1>w3 && w1>w4){
+              var mayoria = "a";
+            }
+            if(w2>w1 && w2>w3 && w2>w4){
+              var mayoria = "b";
+            }
+
+            if(w3>w2 && w3>w1 && w3>w4){
+              var mayoria = "c";
+            }
+            if(w4>w1 && w4>w3 && w4>w2){
+              var mayoria = "d";
+            }
+
+            if(mayoria == "a"){
+            document.getElementById('oculto_a').style.display = 'inline-block';
+            document.getElementById('contenido').style.display = 'none';
+            }
+            if(mayoria == "b"){
+            document.getElementById('oculto_b').style.display = 'inline-block';
+            document.getElementById('contenido').style.display = 'none';
+            }
+            if(mayoria == "c"){
+            document.getElementById('oculto_c').style.display = 'inline-block';
+            document.getElementById('contenido').style.display = 'none';
+            }
+            if(mayoria == "d"){
+            document.getElementById('oculto_d').style.display = 'inline-block';
+            document.getElementById('contenido').style.display = 'none';
+            }
+            
+
+
+        
+
+             }
+
+             function mostrar1(){
+              document.getElementById('cuadro1').style.display = 'block';
+            document.getElementById('texto1').style.display = 'none';
+            document.getElementById('tprincip').style.display = 'none';}
+
+
+             function mostrar2(){
+              document.getElementById('cuadro2').style.display = 'block';
+            document.getElementById('cuadro1').style.display = 'none';}
+              
+              function mostrar3(){
+              document.getElementById('cuadro3').style.display = 'block';
+            document.getElementById('cuadro2').style.display = 'none';}
+
+            function mostrar4(){
+              document.getElementById('cuadro4').style.display = 'block';
+            document.getElementById('cuadro3').style.display = 'none';}
+
+            function mostrar5(){
+              document.getElementById('cuadro5').style.display = 'block';
+            document.getElementById('cuadro4').style.display = 'none';}
+
+            function mostrar6(){
+              document.getElementById('cuadro6').style.display = 'block';
+            document.getElementById('cuadro5').style.display = 'none';}
+
+            function mostrar7(){
+              document.getElementById('cuadro7').style.display = 'block';
+            document.getElementById('cuadro6').style.display = 'none';}
+
+            
+  </script>
+
+  </body>
+</html>

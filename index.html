@@ -22,111 +22,123 @@
     <style>
 
 
-::-moz-selection {
- background: white;
-}
-
-::selection { background: white; }
-
 @-webkit-keyframes 
-icon-beat {  0% {
- -webkit-transform: scale(2);
- -ms-transform: scale(2);
- transform: scale(2);
+click-wave { 0% {
+ width: 40px;
+ height: 40px;
+ opacity: 0.35;
+ position: relative;
 }
  100% {
- -webkit-transform: scale(1);
- -ms-transform: scale(1);
- transform: scale(1);
+ width: 200px;
+ height: 200px;
+ margin-left: -80px;
+ margin-top: -80px;
+ opacity: 0.0;
+}
+}
+
+@-moz-keyframes 
+click-wave { 0% {
+ width: 40px;
+ height: 40px;
+ opacity: 0.35;
+ position: relative;
+}
+ 100% {
+ width: 200px;
+ height: 200px;
+ margin-left: -80px;
+ margin-top: -80px;
+ opacity: 0.0;
+}
+}
+
+@-o-keyframes 
+click-wave { 0% {
+ width: 40px;
+ height: 40px;
+ opacity: 0.35;
+ position: relative;
+}
+ 100% {
+ width: 200px;
+ height: 200px;
+ margin-left: -80px;
+ margin-top: -80px;
+ opacity: 0.0;
 }
 }
 
 @keyframes 
-icon-beat {  0% {
- -webkit-transform: scale(2);
- -ms-transform: scale(2);
- transform: scale(2);
+click-wave { 0% {
+ width: 40px;
+ height: 40px;
+ opacity: 0.35;
+ position: relative;
 }
  100% {
- -webkit-transform: scale(1);
- -ms-transform: scale(1);
- transform: scale(1);
+ width: 200px;
+ height: 200px;
+ margin-left: -80px;
+ margin-top: -80px;
+ opacity: 0.0;
 }
 }
 
-* {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.15s ease-out 0;
+  -moz-transition: all 0.15s ease-out 0;
+  transition: all 0.15s ease-out 0;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  margin-right: 0.5rem;
+  z-index: 1000;
 }
 
-label {
+.option-input:hover { background: #9faab7; }
+
+.option-input:checked { background: #40e0d0; }
+
+.option-input:checked::before {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  content: '\2716';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
   display: block;
   position: relative;
-  padding: 0.5rem 1rem;
-  line-height: 28px;
-  font-weight: normal;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+  z-index: 100;
 }
 
-label:last-of-type { margin-right: 1rem; }
+.option-input.radio { border-radius: 50%; }
 
-label i {
-  display: inline-block;
-  height: 25px;
-  position: relative;
-  top: 6px;
-  font-style: normal;
-  color: #ccc;
-}
-
-label span {
-  display: inline-block;
-  margin-left: 5px;
-  line-height: 25px;
-  color: gray;
-}
-
-input[type="radio"],
-input[type="checkbox"] { display: none; }
-
-input[type="radio"] + i:before,
-input[type="checkbox"] + i:before {
-  font-family: 'FontAwesome';
-  font-size: 28px;
-  height: 25px;
-  width: 25px;
-  display: inline-block;
-}
-
-input[type="radio"]:checked + i,
-input[type="checkbox"]:checked + i {
-  position: relative;
-  -webkit-animation: icon-beat 0.1s ease;
-  animation: icon-beat 0.1s ease;
-}
-
-input[type="radio"]:checked + i + span,
-input[type="checkbox"]:checked + i + span {
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-
-input[type="radio"] + i:before { content: "\f10c"; }
-
-input[type="radio"]:checked + i:before { content: "\f111"; }
-
-input[type="radio"]:checked + i + span,
-input[type="radio"]:checked + i:before { color: rgba(0, 128, 128, 0.5); }
-
-input[type="checkbox"] + i:before { content: "\f096"; }
-
-input[type="checkbox"]:checked + i:before { content: "\f046"; }
-
-input[type="checkbox"]:checked + i + span,
-input[type="checkbox"]:checked + i:before { color: rgba(0, 128, 0, 0.5); }
-
+.option-input.radio::after { border-radius: 50%; }
 
 
     p.parrafo{
@@ -383,13 +395,13 @@ margin-top: 5px;
           
               <form name="pregunta1" action="#" onsubmit="return comprobar()">
 
-              <label for="pokemonRed"><input type="radio" name="pokemon" id="pokemonRed" value="Red"/>
+              <label for="pokemonRed"><input class="option-input radio" type="radio" name="pokemon" id="pokemonRed" value="Red"/>
               <i></i> <span>Si</span>
               </label>
 
               
               <br>  
-              <label for="pokemonBlue"><input type="radio" name="pokemon" id="pokemonBlue" value="Red"/>
+              <label for="pokemonBlue"><input class="option-input radio" type="radio" name="pokemon" id="pokemonBlue" value="Red"/>
               <i></i> <span>No</span>
               </label>
 
